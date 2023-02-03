@@ -1,0 +1,39 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command:  uvicorn main:app --host 0.0.0.0 
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - 8008:8000
+    environment:
+      - .env
+
+    depends_on:
+      - db
+    networks:
+      - elevatus
+
+
+
+  db:
+    image: mongo
+    restart: always
+    networks:
+      - elevatus
+    ports:
+      - '6000:27017'
+
+volumes:
+  mongo:
+
+
+networks:
+  elevatus:
+    name: elevatus
+    driver: bridge

@@ -1,0 +1,2 @@
+,_id,first_name,last_name,email,UUID,career_level,job_major,years_of_experience,degree_type,skills,nationality,city,salary,gender,user_id
+0,63dcea49eb50ae35e7b4df3d,string,string,user@example.com,$2b$12$UmFM8G1ozlXCzDdpd7ME3.35PyLR67fTh2vaXOrSq7PjeAItI5Gwe,string,string,0,string,c#,string,string,0,Male,63dce9d8eb50ae35e7b4df3c
